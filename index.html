@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1><i>Average</i></h1>
+    <Form onsubmit="calculate();return false;">
+       <label for="English">English</label>
+        <input type="number" min="" required id="English" placeholder="Enter your English Marks">
+        <br>
+        <br>
+        <label for="Urdu">Urdu</label>
+        <input type="number" min="" required id="Urdu" placeholder="Enter your Urdu Marks">
+        <br>
+        <br>
+        <label for="Math">Math</label>
+        <input type="number" min="" required id="Math" placeholder="Enter your Math Marks">
+        <br>
+        <br>
+        <button type="submit">Calculate</button>
+
+    </Form>
+
+    <h1 id="result"></h1>
+    <h1 id="totalMarks"></h1>
+
+<script>
+
+function calculate(){
+let English =+document.querySelector("#English").value
+
+let Urdu =+document.querySelector("#Urdu").value;
+
+let Math =+document.querySelector("#Math").value
+
+let totalMarks=English+Urdu+Math;
+
+let result=English+Urdu+Math / 3;
+
+document.querySelector("#result").innerHTML =`Your percentage is ${result}%`;
+
+document.querySelector("#totalMarks").innerHTML =`Your percentage is ${totalMarks}`;
+
+}
+
+
+</script>
+
+</body>
+
+</html>
